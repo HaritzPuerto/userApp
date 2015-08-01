@@ -1,0 +1,10 @@
+@(users : List[User])
+
+@main("Lista de usuarios") {
+    <ol>
+        @for(user <- users){
+            <li>@user.username</li>
+        }
+    </ol>
+
+}

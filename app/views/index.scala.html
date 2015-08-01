@@ -1,0 +1,14 @@
+@(userForm: Form[User])(implicit messages: Messages)
+
+@import helper._
+
+@main("Welcome to Play") {
+
+    @form(action=routes.Application.signUp()) {
+        @inputText(userForm("username"))
+        @inputText(userForm("password"))
+
+        <input type="submit" value="Submit" class="btn btn-primary">
+    }
+
+}
